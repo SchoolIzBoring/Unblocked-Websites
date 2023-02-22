@@ -32,7 +32,7 @@
       <label for="site-bg-color">Site Background Color:</label>
       <input type="color" id="site-bg-color" name="site-bg-color">
     </form>
-    <form id="color-form" action="https://schoolizboring.github.io/Unblocked-Websites/" method="POST">
+    <form id="settings-form" method="post" action="https://schoolizboring.github.io/Unblocked-Websites/">
         <!-- form inputs here -->
       <button type="submit">Save</button>
     </form>
@@ -61,6 +61,10 @@ form.addEventListener('submit', function(event) {
   document.cookie = `btn-bg-color=${btnBgColor};`;
   document.cookie = `btn-text-color=${btnTextColor};`;
   document.cookie = `site-bg-color=${siteBgColor};`;
+
+  // Redirect to main site
+  window.location.href = 'https://schoolizboring.github.io/Unblocked-Websites/';
+
 });
 
 // Apply saved color values on page load
