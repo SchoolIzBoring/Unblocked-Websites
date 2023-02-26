@@ -1,59 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Unblocked - Websites</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-      .btn {
-  color: #fff;
-  background: rgb(121, 121, 121);
-  background: rgba(0, 0, 0, 1);
-  padding: 10px 16px;
-  line-height: 1.3333333;
-  border-radius: 6px;
-  border-color: #ccc;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(115, 112, 112, 0.3);
-}
 
-.btn:hover {
-  background-color: #555;
-  color: #fff;
-}
+<head>
+  <title>Unblocked - Websites</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="./js/index.js"></script>
+  <script src="./js/scroll.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 
+<body>
+  <div id="header">
+    <img src="logo.png" alt="Unblocked" />
+  </div>
+  <div id="noticeContainer"></div>
+  <div class="container">
+    <div id="quickMenu" class="alert">
+      <span style="font-size: 18px">Index</span>
+      <p>
+        <a href="#gamingwebsites">Gaming</a>
+        <a href="#proxies">Proxies</a>
+        <a href="#other">Other</a>
+        <a href="#tools">Tools</a>
+        <a href="#about">About</a>
+      </p>
+    </div>
+    <div class="container">
+      <div class="websites-container">
+        <div class="header">
+          <h4 class="websites-title">
+            <span class="websites-text"><img src="./images/computer.png" /> Gaming Websites <img src="./images/computer.png" /></span>
+            <button class="websites-collapse-button" onclick="toggleAllWebsitesContent()">
+              <img src="./images/downarrow.png" alt="expand" />
+            </button>
+          </h4>
+        </div>
+        <div class="content" id="content">
+          <div class="row">
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://3kh0.github.io">
+                <img src="./images/3kh0.png" alt="icon" width="16" height="16" />&nbsp;3kh0 </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://ellieeet123.github.io">
+                <img src="./images/pringles.png" alt="icon" width="16" height="16" />&nbsp;Pringles </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://games.unblockify.gq">
+                <img src="./images/unblockify_games.png" alt="icon" width="16" height="16" />&nbsp;Unblockify Games </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://lioxryt.github.io/">
+                <img src="./images/lioxryt.png" alt="icon" width="16" height="16" />&nbsp;Lioxryt Games </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://outred.github.io">
+                <img src="./images/outred.png" alt="icon" width="16" height="16" />&nbsp;OutRed Games </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://gba.js.org">
+                <img src="./images/gba.png" alt="icon" width="16" height="16" />&nbsp;Gba Online </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://zatoga.vercel.app">
+                <img src="./images/zatoga.png" alt="icon" width="16" height="16" />&nbsp;Zatoga </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://binbashbanana.github.io/webretro">
+                <img src="./images/wr.png" alt="icon" width="16" height="16" />&nbsp;Web Retro </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://archive.org/details/internetarcade">
+                <img src="./images/archive.png" alt="icon" width="16" height="16" />&nbsp;Internet Arcade </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://593d4d43-3073-45d0-86e2-0443d15adf21.id.repl.co/">
+                <img src="./images/sh.png" alt="icon" width="16" height="16" />&nbsp;School Heaven </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://mathgames66.github.io">
+                <img src="./images/mg.jpg" alt="icon" width="16" height="16" />&nbsp;MathGames66 </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://abc6782.github.io/core-html/games.html">
+                <img src="./images/abc.png" alt="icon" width="16" height="16" />&nbsp;ABC Games </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://yum-yum-games-go.snatch-a-bite.com/">
+                <img src="./images/tmm.png" alt="icon" width="16" height="16" />&nbsp;The Modern Method </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://skool.world">
+                <img src="./images/skool.png" alt="icon" width="16" height="16" />&nbsp;Skool </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://oddisbest.dev">
+                <img src="./images/og.png" alt="icon" width="16" height="16" />&nbsp;Odd Games </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://bidoofery.github.io">
+                <img src="./images/bidoofery.png" alt="icon" width="16" height="16" />&nbsp;Bidoofery </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://theooofficial.github.io/myRETROGAMES">
+                <img src="./images/rg.png" alt="icon" width="16" height="16" />&nbsp;Retro Games </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://cpsgames.herokuapp.com">
+                <img src="./images/shs.png" alt="icon" width="16" height="16" />&nbsp;SHS Games </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proxy-container">
+        <div class="header">
+          <h4 class="proxy-title">
+            <span class="proxy-text"><img src="./images/proxy.png" /> Proxies <img src="./images/proxy.png" /></span>
+            <button class="collapse-button" id="proxy-collapse-button" onclick="toggleProxyContent()">
+              <img src="./images/downarrow.png" alt="expand" />
+            </button>
+          </h4>
+        </div>
+        <div class="content" id="proxy-content">
+          <div class="row">
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://167.114.102.230">
+                <img src="./images/kp.png" alt="icon" width="16" height="16" />&nbsp;KProxy </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://67.207.72.190">
+                <img src="./images/kp.png" alt="icon" width="16" height="16" />&nbsp;CroxyProxy </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://67.207.72.190">
+                <img src="./images/kp.png" alt="icon" width="16" height="16" />&nbsp;CroxyProxy </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://167.114.102.230">
+                <img src="./images/kp.png" alt="icon" width="16" height="16" />&nbsp;KProxy </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://67.207.72.190">
+                <img src="./images/kp.png" alt="icon" width="16" height="16" /> CroxyProxy </a>
+            </div>
+            <div class="col-md-4">
+              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://67.207.72.190">
+                <img src="./images/kp.png" alt="icon" width="16" height="16" /> CroxyProxy </a>
+            </div>
+          </div>
+        </div>
+        <div class="section-container">
+          <div class="section-header">
+            <h4 class="section-title">
+              <span class="section-text"><img src="./images/other.png" width="20" height="20"> Other <img src="./images/other.png" width="20" height="20">
+              </span>
+              <button class="section-collapse-button" onclick="toggleSectionContent()">
+                <img src="./images/downarrow.png" alt="expand" />
+              </button>
+            </h4>
+          </div>
+          <div class="section-content" id="section-content">
+            <div class="row">
+              <div class="col-md-4">
+                <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://schoolizboring.github.io/Websites-Links/">
+                  <img src="./images/computer.png" alt="icon" width="16" height="16" />&nbsp;List Of Proxies </a>
+              </div>
+              <div class="col-md-4">
+                <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://schoolizboring.github.io/List-of-Bookmarklets/">
+                  <img src="./images/computer.png" alt="icon" width="16" height="16" />&nbsp;List Of Bookmarklets </a>
+              </div>
+              <div class="col-md-4">
+                <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://schoolizboring.github.io/List-of-Bookmarklets/">
+                  <img src="./images/computer.png" alt="icon" width="16" height="16" />&nbsp;My Bookmark Folder (OP) </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<style>
+  .btn {
+    color: #fff;
+    background: rgb(121, 121, 121);
+    background: rgba(0, 0, 0, 1);
+    padding: 10px 16px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    border-color: #ccc;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(115, 112, 112, 0.3);
+  }
 
-      .container {
-        margin: 0 auto;
-        padding: 8px;
-      }
+  .btn:hover {
+    background-color: #555;
+    color: #fff;
+  }
 
-      body {
-        font-family: "Courier New", Courier, monospace;
-        color: #000;
-        text-align: center;
-      }
+  .container {
+    margin: 0 auto;
+    padding: 8px;
+  }
 
-      #header {
-  margin-bottom: 0;
-}
+  body {
+    font-family: "Courier New", Courier, monospace;
+    color: #000;
+    text-align: center;
+  }
 
-#quickMenu {
+  #header {
+    margin-bottom: 0;
+  }
+
+  #quickMenu {
     width: 40%;
     margin-top: 0px;
     padding-left: 5px;
     padding-right: 5px;
-}
+  }
 
+  #header img {
+    margin-top: 20px;
+  }
 
-#header img {
-  margin-top: 20px;
-}
-
-.alert {
+  .alert {
     margin: 0 auto;
     width: 55%;
     color: #fff;
@@ -63,225 +251,189 @@
     margin-bottom: 10px;
     margin-top: 5px;
     border-radius: 0.25rem;
-}
-
-@media (min-width: 320px) and (max-width: 768px) {
-  #quickMenu {
-    width: 56%;
   }
-}
 
-h4 {
+  @media (min-width: 320px) and (max-width: 768px) {
+    #quickMenu {
+      width: 56%;
+    }
+  }
+
+  h4 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     margin-top: 25px;
-}
+  }
 
-.img-responsive {
+  .img-responsive {
     display: block;
     max-width: 100%;
     height: auto;
-}
+  }
 
-body {
-  overflow-y: scroll;
-}
+  body {
+    overflow-y: scroll;
+  }
 
-a {
-  color: white;
-  text-decoration: none;
-}
+  a {
+    color: white;
+    text-decoration: none;
+  }
 
+  .proxy-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .proxy-text {
+    text-align: center;
+  }
 
+  .proxy-container {
+    position: relative;
+  }
 
+  .collapse-button {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    transform: translate(20%, -20%);
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+  }
 
-    </style>
-    <script>
-        $(document).ready(function() {
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+  .collapse-button img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+  .collapse-button.expanded img {
+    transform: rotate(180deg);
+    content: url(./images/minus.png);
+  }
 
-      // Store hash
-      var hash = this.hash;
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.367s ease-in-out;
+  }
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
+  .content.expanded {
+    max-height: 1000px;
+    transition: max-height 0.9s ease-in-out;
+  }
 
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
+  .websites-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    </script>
-  </head>
-  <body>
-    <div id="header">
-      <img src="logo.png" alt="Unblocked">
-  </div>
-  <div id="noticeContainer"></div>
-  <div class="container">
-      <div id="quickMenu" class="alert">
-          <span style="font-size:18px;">Index</span>
-          <p>
-              <a href="#proxies">Proxies</a>
-              <a href="#websites">Websites</a>
-              <a href="#other">Other</a>
-              <a href="#proxies2">Proxies 2</a>
-              <a href="#websites2">Websites 2</a>
-              <a href="settings.html">Settings</a>
-          </p>
-      </div>
-        <h4 id="All Websites"><img src="computer.png"> All Websites <img src="computer.png"></h4>
-        <div class="row">
-            <div class="col-md-4">
-                <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://3kh0.github.io">
-                    <img src="./images/3kh0.png" alt="icon" width="16" height="16">&nbsp;3kh0
-                  </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://ellieeet123.github.io">
-              <img src="./images/pringles.png" alt="icon" width="16" height="16">&nbsp;Pringles
-            </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://games.unblockify.gq">
-              <img src="./images/unblockify_games.png" alt="icon" width="16" height="16">&nbsp;Unblockify Games
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-                <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://lioxryt.github.io/">
-                    <img src="./images/lioxryt.png" alt="icon" width="16" height="16">&nbsp;Lioxryt Games
-                  </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://outred.github.io">
-              <img src="./images/outred.png" alt="icon" width="16" height="16">&nbsp;OutRed Games
-            </a>                 
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://gba.js.org">
-              <img src="./images/gba.png" alt="icon" width="16" height="16">&nbsp;Gba Online
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-                <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://zatoga.vercel.app">
-                    <img src="./images/zatoga.png" alt="icon" width="16" height="16">&nbsp;Zatoga
-                  </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://binbashbanana.github.io/webretro">
-              <img src="./images/wr.png" alt="icon" width="16" height="16">&nbsp;Web Retro
-            </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://archive.org/details/internetarcade">
-              <img src="./images/archive.png" alt="icon" width="16" height="16">&nbsp;Internet Arcade
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-                <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://593d4d43-3073-45d0-86e2-0443d15adf21.id.repl.co/">
-                    <img src="./images/sh.png" alt="icon" width="16" height="16">&nbsp;School Heaven
-                  </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://mathgames66.github.io">
-              <img src="./images/mg.jpg" alt="icon" width="16" height="16">&nbsp;MathGames66
-            </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://abc6782.github.io/core-html/games.html">
-              <img src="./images/abc.png" alt="icon" width="16" height="16">&nbsp;ABC Games
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-                <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://yum-yum-games-go.snatch-a-bite.com/">
-                    <img src="./images/tmm.png" alt="icon" width="16" height="16">&nbsp;The Modern Method
-                  </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://skool.world">
-              <img src="./images/skool.png" alt="icon" width="16" height="16">&nbsp;Skool
-            </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://oddisbest.dev">
-              <img src="./images/og.png" alt="icon" width="16" height="16">&nbsp;Odd Games
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-                <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://bidoofery.github.io">
-                    <img src="./images/bidoofery.png" alt="icon" width="16" height="16">&nbsp;Bidoofery
-                  </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://theooofficial.github.io/myRETROGAMES">
-              <img src="./images/rg.png" alt="icon" width="16" height="16">&nbsp;Retro Games
-            </a>                  
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://cpsgames.herokuapp.com">
-              <img src="./images/shs.png" alt="icon" width="16" height="16">&nbsp;SHS Games
-              </a>
-            </div>
-          </div>
-        <a id="proxies"></a>
-        <div class="container">
-        <h4 id="Proxies"><img src="./images/proxy.png"> Proxies <img src="./images/proxy.png"></h4>
-        </div>
-          <div class="row">
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://167.114.102.230">
-                <img src="./images/kp.png" alt="icon" width="16" height="16">&nbsp;KProxy
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://example.com">Example 2</a>
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://example.com">Example 3</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://example.com">Example 4</a>
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://example.com">Example 5</a>
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://example.com"> Example 6</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://example.com">Example 7</a>
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://example.com">Example 8</a>
-            </div>
-            <div class="col-md-4">
-              <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://example.com"> Example 9</a>
-            </div>
-          </div>
+  .websites-text {
+    text-align: center;
+  }
+
+  .websites-container {
+    position: relative;
+  }
+
+  .websites-collapse-button {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    transform: translate(20%, -20%);
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .websites-collapse-button img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .websites-collapse-button.expanded img {
+    transform: rotate(180deg);
+    content: url(./images/minus.png);
+  }
+
+  .websites-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.367s ease-in-out;
+  }
+
+  .websites-content.expanded {
+    max-height: 1000px;
+    transition: max-height 0.9s ease;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .section-text {
+    text-align: center;
+  }
+
+  .section-container {
+    position: relative;
+  }
+
+  .section-collapse-button {
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    transform: translate(20%, -20%);
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .section-collapse-button img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .section-collapse-button.expanded img {
+    transform: rotate(180deg);
+    content: url(./images/minus.png);
+  }
+
+  .section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.367s ease-in-out;
+  }
+
+  .section-content.expanded {
+    max-height: 1000px;
+    transition: max-height 0.9s ease-in-out;
+  }
+
+  .btn {
+    background-color: black;
+    color: white;
+    padding: 10px 16px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+  }
+</style>
+
+</html>
