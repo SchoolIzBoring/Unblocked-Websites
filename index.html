@@ -38,26 +38,26 @@
           <a href="#about">About</a>
         </p>
       </div>
-      <p>Number of current visitors: <span id="currentCount"></span></p>
-
-      <!-- Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXRHPNW89S"></script>
+      <p>Number of users: <span id="connection-counter">0</span></p>
       <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-KXRHPNW89S');
-    
-        // Update viewer count
-        setInterval(function() {
-          gtag('event', 'page_view', {
-            'send_to': 'G-KXRHPNW89S',
-            'event_callback': function() {
-              var currentCount = ga.getAll()[0].get('streamId')[0].currentActiveUsers;
-              document.getElementById('currentCount').innerHTML = currentCount;
-            }
-          });
-        }, 1000);
+        // Count the number of active connections
+        let activeConnections = 0;
+        window.addEventListener('load', () => {
+          activeConnections++;
+          updateCounter(activeConnections);
+        });
+        window.addEventListener('beforeunload', () => {
+          activeConnections--;
+          updateCounter(activeConnections);
+        });
+        
+        // Update the counter on the page
+        function updateCounter(count) {
+          const counterElement = document.getElementById('connection-counter');
+          if (counterElement) {
+            counterElement.textContent = count;
+          }
+        }
       </script>
       <div class="container">
         <div class="websites-container">
