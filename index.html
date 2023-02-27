@@ -19,6 +19,7 @@
     <script src="./js/scroll.js"></script>
     <script src="./js/click.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
@@ -37,6 +38,27 @@
           <a href="#about">About</a>
         </p>
       </div>
+      <p>Number of current visitors: <span id="currentCount"></span></p>
+
+      <!-- Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXRHPNW89S"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KXRHPNW89S');
+    
+        // Update viewer count
+        setInterval(function() {
+          gtag('event', 'page_view', {
+            'send_to': 'G-KXRHPNW89S',
+            'event_callback': function() {
+              var currentCount = ga.getAll()[0].get('streamId')[0].currentActiveUsers;
+              document.getElementById('currentCount').innerHTML = currentCount;
+            }
+          });
+        }, 1000);
+      </script>
       <div class="container">
         <div class="websites-container">
           <div class="header">
@@ -224,7 +246,6 @@
       </div>
     </div>
     </div>
-    <p>Number of users: <span id="clickCount" style="font-weight: bold; color: black;">0</span></p>
   </body>
   <style>
     .btn {
