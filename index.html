@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXRHPNW89S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXRHPNW89S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-KXRHPNW89S');
-</script>
+      gtag('config', 'G-KXRHPNW89S');
+    </script>
     <title>Unblocked - Websites</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,7 +20,6 @@
     <script src="./js/click.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div id="header">
@@ -38,19 +37,8 @@
           <a href="#about">About</a>
         </p>
       </div>
-      <p>Total users: <span id="connection-counter">0</span></p>
+      <p>Number of users: <span id="connection-counter">4</span></p>
       <script>
-        // Count the number of active connections
-        let activeConnections = 5;
-        window.addEventListener('load', () => {
-          activeConnections++;
-          updateCounter(activeConnections);
-        });
-        window.addEventListener('beforeunload', () => {
-          activeConnections--;
-          updateCounter(activeConnections);
-        });
-        
         // Update the counter on the page
         function updateCounter(count) {
           const counterElement = document.getElementById('connection-counter');
@@ -58,6 +46,12 @@
             counterElement.textContent = count;
           }
         }
+
+        // Start the Python script to count active connections
+        const eventSource = new EventSource('/active_connections');
+        eventSource.onmessage = function(event) {
+          updateCounter(event.data);
+        };
       </script>
       <div class="container">
         <div class="websites-container">
@@ -235,9 +229,9 @@
                     <img src="./images/computer.png" alt="icon" width="16" height="16" />&nbsp;List Of Bookmarklets </a>
                 </div>
                 <div class="col-md-4">
-                  <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://example.com/
+                  <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://schoolizboring.github.io/My-Bookmarklet-Folder-OP-/
 ">
-                    <img src="./images/computer.png" alt="icon" width="16" height="16" />&nbsp;Under Maintenance  </a>
+                    <img src="./images/computer.png" alt="icon" width="16" height="16" />&nbsp;My Bookmark Folder (OP) </a>
                   </div>
               </div>
             </div>
@@ -248,241 +242,36 @@
     </div>
   </body>
   <style>
-    .btn {
-      color: #fff;
-      background: rgb(121, 121, 121);
-      background: rgba(0, 0, 0, 1);
-      padding: 10px 16px;
-      line-height: 1.3333333;
-      border-radius: 6px;
-      border-color: #ccc;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 2px 5px rgba(115, 112, 112, 0.3);
-    }
-
-    .btn:hover {
-      background-color: #555;
-      color: #fff;
-    }
-
-    .container {
-      margin: 0 auto;
-      padding: 8px;
-    }
-
-    body {
-      font-family: "Courier New", Courier, monospace;
-      color: #000;
-      text-align: center;
-    }
-
-    #header {
-      margin-bottom: 0;
-    }
-
-    #quickMenu {
-      width: 40%;
-      margin-top: 0px;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #header img {
-      margin-top: 20px;
-    }
-
-    .alert {
-      margin: 0 auto;
-      width: 55%;
-      color: #fff;
-      background: rgba(102, 102, 102, 0.6);
-      border-color: #bcdff1;
-      padding: 8px 0 14px 0;
-      margin-bottom: 10px;
-      margin-top: 5px;
-      border-radius: 0.25rem;
-    }
-
-    @media (min-width: 320px) and (max-width: 768px) {
-      #quickMenu {
-        width: 56%;
-      }
-    }
-
-    h4 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      margin-top: 25px;
-    }
-
-    .img-responsive {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    body {
-      overflow-y: scroll;
-    }
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .proxy-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .proxy-text {
-      text-align: center;
-    }
-
-    .proxy-container {
-      position: relative;
-    }
-
     .collapse-button {
-      position: absolute;
-      top: 0%;
-      right: 10%;
-      transform: translate(20%, -20%);
-      cursor: pointer;
-      padding: 10px;
-      background-color: transparent;
-      border: none;
-    }
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  transform: translate(20%, -20%);
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
 
-    .collapse-button img {
-      width: 20px;
-      height: 20px;
-      transition: transform 0.5s ease-in-out;
-    }
+.collapse-button img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+}
 
-    .collapse-button.expanded img {
-      transform: rotate(180deg);
-      content: url(./images/minus.png);
-    }
+.collapse-button.expanded img {
+  transform: rotate(180deg);
+  content: url(./images/minus.png);
+}
 
-    .content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.367s ease-in-out;
-    }
+.websites-collapse-button.expanded img {
+  transform: rotate(180deg);
+  content: url(./images/minus.png);
+}
 
-    .content.expanded {
-      max-height: 1000px;
-      transition: max-height 0.9s ease-in-out;
-    }
-
-    .websites-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .websites-text {
-      text-align: center;
-    }
-
-    .websites-container {
-      position: relative;
-    }
-
-    .websites-collapse-button {
-      position: absolute;
-      top: 0%;
-      right: 10%;
-      transform: translate(20%, -20%);
-      cursor: pointer;
-      padding: 10px;
-      background-color: transparent;
-      border: none;
-    }
-
-    .websites-collapse-button img {
-      width: 20px;
-      height: 20px;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .websites-collapse-button.expanded img {
-      transform: rotate(180deg);
-      content: url(./images/minus.png);
-    }
-
-    .websites-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.367s ease-in-out;
-    }
-
-    .websites-content.expanded {
-      max-height: 1000px;
-      transition: max-height 0.9s ease;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .section-img {
-      width: 20px;
-      height: 20px;
-    }
-
-    .section-text {
-      text-align: center;
-    }
-
-    .section-container {
-      position: relative;
-    }
-
-    .section-collapse-button {
-      position: absolute;
-      top: 0%;
-      right: 10%;
-      transform: translate(20%, -20%);
-      cursor: pointer;
-      padding: 10px;
-      background-color: transparent;
-      border: none;
-    }
-
-    .section-collapse-button img {
-      width: 20px;
-      height: 20px;
-      transition: transform 0.5s ease-in-out;
-    }
-
-    .section-collapse-button.expanded img {
-      transform: rotate(180deg);
-      content: url(./images/minus.png);
-    }
-
-    .section-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.367s ease-in-out;
-    }
-
-    .section-content.expanded {
-      max-height: 1000px;
-      transition: max-height 0.9s ease-in-out;
-    }
-
-    .btn {
-      background-color: black;
-      color: white;
-      padding: 10px 16px;
-      line-height: 1.3333333;
-      border-radius: 6px;
-    }
+.section-collapse-button.expanded img {
+  transform: rotate(180deg);
+  content: url(./images/minus.png);
+}
   </style>
 </html>
