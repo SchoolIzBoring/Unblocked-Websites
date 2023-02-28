@@ -1,5 +1,5 @@
 
-![Logo](https://raw.githubusercontent.com/SchoolIzBoring/Unblocked-Websites/main/images/github-header-image.png)
+![Logo](https://raw.githubusercontent.com/SchoolIzBoring/Unblocked-Websites/main/logo.png)
 
 
 # Unblocked Websites
