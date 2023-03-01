@@ -15,9 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/png" href="images/uw.png" sizes="16x16">
     <script src="./js/index.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/click.js"></script>
+    <script src="./js/custombuttons.js"></script>
+    <script src="./js/tabcloak.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   </head>
@@ -30,29 +33,14 @@
       <div id="quickMenu" class="alert">
         <span style="font-size: 18px">Index</span>
         <p>
-          <a href="#gamingwebsites">Gaming</a>
-          <a href="#proxies">Proxies</a>
-          <a href="#other">Other</a>
-          <a href="#tools">Tools</a>
-          <a href="#about">About</a>
-        </p>
+          <a href="#gaming" style="color: white; text-decoration: none; transition: color 0.3s;">Gaming</a>
+          <a href="#proxies" style="color: white; text-decoration: none; transition: color 0.3s;">Proxies</a>
+          <a href="#other" style="color: white; text-decoration: none; transition: color 0.3s;">Other</a>
+          <a href="#tools" style="color: white; text-decoration: none; transition: color 0.3s;">Tools</a>
+          <a href="#about" style="color: white; text-decoration: none; transition: color 0.3s;">About</a>
+        </p>        
       </div>
       <p>Number of users: <span id="connection-counter">34</span></p>
-      <script>
-        // Update the counter on the page
-        function updateCounter(count) {
-          const counterElement = document.getElementById('connection-counter');
-          if (counterElement) {
-            counterElement.textContent = count;
-          }
-        }
-
-        // Start the Python script to count active connections
-        const eventSource = new EventSource('/active_connections');
-        eventSource.onmessage = function(event) {
-          updateCounter(event.data);
-        };
-      </script>
       <div class="container">
         <div class="websites-container">
           <div class="header">
@@ -222,134 +210,51 @@
               <div class="row">
                 <div class="col-md-4">
                   <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://schoolizboring.github.io/Websites-Links/">
-                    <img src="./images/computer.png" alt="icon" width="16" height="16" />&nbsp;List Of Proxies </a>
+                    <img src="./images/other.png" alt="icon" width="16" height="16" />&nbsp;List Of Proxies </a>
                 </div>
                 <div class="col-md-4">
                   <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://schoolizboring.github.io/List-of-Bookmarklets/">
-                    <img src="./images/computer.png" alt="icon" width="16" height="16" />&nbsp;List Of Bookmarklets </a>
+                    <img src="./images/other.png" alt="icon" width="16" height="16" />&nbsp;List Of Bookmarklets </a>
                 </div>
                 <div class="col-md-4">
-                  <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://schoolizboring.github.io/My-Bookmarklet-Folder-OP-/
-">
-                    <img src="./images/computer.png" alt="icon" width="16" height="16" />&nbsp;My Bookmark Folder (OP) </a>
+                  <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://schoolizboring.github.io/My-Bookmarklet-Folder-OP-/">
+                    <img src="./images/other.png" alt="icon" width="16" height="16" />&nbsp;My Bookmark Folder (OP) </a>
                   </div>
               </div>
             </div>
-          </div>
+            <div class="tools-container">
+              <div class="tools-header">
+                <h4 class="tools-title">
+                  <span class="tools-text">
+                    <img src="./images/tools.png" width="20" height="20"> Tools <img src="./images/tools.png" width="20" height="20">
+                  </span>
+                  <button class="tools-collapse-button" onclick="toggleToolsContent()">
+                    <img src="./images/downarrow.png" alt="expand" />
+                  </button>
+                </h4>
+              </div>
+              <div class="tools-content" id="tools-content">
+                <div class="row">
+                  <div class="col-md-4">
+                    <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="#" onclick="createDivElement()"><img src="./images/tools.png" alt="icon" width="16" height="16" />&nbsp;Tab Cloak </a>
+                  </div>
+                  <div class="col-md-4">
+                    <a class="btn btn-default btn-lg btn-block" role="button" href="#" onclick="openColorPicker(); return false;">
+                      <img src="./images/tools.png" alt="icon" width="16" height="16" />&nbsp;Custom Buttons
+                    </a>
+                  </div>                                  
+                  <div class="col-md-4">
+                    <a class="btn btn-default btn-lg btn-block" role="button" target="_blank" href="https://schoolizboring.github.io/Make-This-Site-An-App/">
+                      <img src="./images/tools.png" alt="icon" width="16" height="16" />&nbsp;Make The Site An App </a>
+                    </div>
+                </div>
         </div>
       </div>
     </div>
     </div>
   </body>
   <style>
-    .btn {
-  color: #fff;
-  background: rgb(121, 121, 121);
-  background: #292929;
-  padding: 10px 16px;
-  line-height: 1.3333333;
-  border-radius: 10px;
-  border-color: #ccc;
-  transition: background-color 0.3s ease, transform 0.5s ease;
-  box-shadow: 0 2px 5px rgba(115, 112, 112, 0.3);
-  margin-right: 10px;
-  position: relative;
-}
-
-.btn:hover {
-  background-color: #555;
-  color: #fff;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  transform: translateY(-5px);
-  transition: transform 0.5s ease, background-color 0.5s ease; /* Slow down the transform transition */
-}
-
-
-.container {
-  margin: 0 auto;
-  padding: 8px;
-}
-
-body {
-  font-family: "Courier New", Courier, monospace;
-  color: #ffffff;
-  text-align: center;
-  background-color: #1C1C1C
-}
-
-#header {
-  margin-bottom: 0;
-  position: relative;
-}
-
-#quickMenu {
-  width: 40%;
-  margin-top: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#header img {
-  margin-top: 20px;
-}
-
-.alert {
-  margin: 0 auto;
-  width: 55%;
-  color: #fff;
-  background-color:  #292929;
-  border-color: #676767;
-  padding: 8px 0 14px 0;
-  margin-bottom: 10px;
-  margin-top: 5px;
-  border-radius: 50px;
-}
-
-@media (min-width: 320px) and (max-width: 768px) {
-  #quickMenu {
-    width: 56%;
-  }
-}
-
-h4 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-top: 25px;
-  position: relative;
-}
-
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-body {
-  overflow-y: scroll;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  background-color:  #292929;
-}
-
-.proxy-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.proxy-text {
-  text-align: center;
-}
-
-.proxy-container {
-  position: relative;
-}
-
-.collapse-button {
+    .collapse-button {
   position: absolute;
   top: 0%;
   right: 10%;
@@ -371,109 +276,33 @@ a {
   content: url(./images/minus.png);
 }
 
-.content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.367s ease-in-out;
-}
-
-.content.expanded {
-  max-height: 1000px;
-  transition: max-height 0.9s ease-in-out;
-}
-
-.websites-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.websites-text {
-  text-align: center;
-}
-
-.websites-container {
-  position: relative;
-}
-
-.websites-collapse-button {
-  position: absolute;
-  top: 0%;
-  right: 10%;
-  transform: translate(20%, -20%);
-  cursor: pointer;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-}
-
-.websites-collapse-button img {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.5s ease-in-out;
-}
-
 .websites-collapse-button.expanded img {
   transform: rotate(180deg);
   content: url(./images/minus.png);
 }
 
-.websites-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.367s ease-in-out;
-}
-
-.websites-content.expanded {
-  max-height: 1000px;
-  transition: max-height 0.9s ease;
-}
-
-.section-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.section-text {
-  text-align: center;
-}
-
-.section-container {
-  position: relative;
-}
-
-.section-collapse-button {
-  position: absolute;
-  top: 0%;
-  right: 10%;
-  transform: translate(20%, -20%);
-  cursor: pointer;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-}
-
-.section-collapse-button img {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.5s ease-in-out;
-}
 
 .section-collapse-button.expanded img {
   transform: rotate(180deg);
   content: url(./images/minus.png);
 }
 
-.section-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.367s ease-in-out;
+.tools-collapse-button.expanded img {
+  transform: rotate(180deg);
+  content: url(./images/minus.png);
 }
 
-.section-content.expanded {
-  max-height: 1000px;
-  transition: max-height 0.9s ease-in-out;
+body {
+  font-family: "Courier New", Courier, monospace;
+  color: #ffffff;
+  text-align: center;
+  background-color: #1C1C1C;
+  cursor: url('images/pointerblue1.png'), none;
+}
+
+a:hover,
+button:hover {
+    cursor: url('images/handblue120.png'), pointer;
 }
 
   </style>
