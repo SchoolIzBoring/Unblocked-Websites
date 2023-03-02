@@ -1,0 +1,272 @@
+
+.btn {
+  color: #fff;
+  background: rgb(121, 121, 121);
+  background: #292929;
+  padding: 10px 16px;
+  line-height: 1.3333333;
+  border-radius: 10px;
+  border-color: #0DD7F2;
+  transition: background-color 0.3s ease, transform 0.5s ease;
+  box-shadow: 0 2px 5px rgba(115, 112, 112, 0.3);
+  margin-right: 10px;
+  position: relative;
+}
+
+.btn:hover {
+  background-color: #555;
+  color: #fff;
+  box-shadow: 3px 3px 3px #0DD7F2;
+  transform: translateY(-5px);
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Slow down the transform transition */
+  border-color: #0DD7F2;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 8px;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  color: #ffffff;
+  text-align: center;
+  background-color: #1C1C1C;
+}
+
+#header {
+  margin-bottom: 0;
+  position: relative;
+}
+
+#header img {
+  margin-top: 20px;
+}
+
+.alert {
+  margin: 0 auto;
+  width: 55%;
+  color: #fff;
+  background-color:  #292929;
+  border-color: #676767;
+  padding: 8px 0 14px 0;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  #quickMenu {
+    width: 56%;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-y: scroll;
+}
+
+.proxy-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proxy-text {
+  text-align: center;
+}
+
+.proxy-container {
+  position: relative;
+}
+
+.collapse-button {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  transform: translate(20%, -20%);
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.collapse-button img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.collapse-button.expanded img {
+  transform: rotate(180deg);
+  content: url(./images/minus.png);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.367s ease-in-out;
+}
+
+.content.expanded {
+  max-height: 1000px;
+  transition: max-height 0.9s ease-in-out;
+}
+
+.websites-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.websites-text {
+  text-align: center;
+}
+
+.websites-container {
+  position: relative;
+}
+
+.websites-collapse-button {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  transform: translate(20%, -20%);
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.websites-collapse-button img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.websites-collapse-button.expanded img {
+  transform: rotate(180deg);
+  content: url(./images/minus.png);
+}
+
+.websites-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.367s ease-in-out;
+}
+
+.websites-content.expanded {
+  max-height: 1000px;
+  transition: max-height 0.9s ease;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-text {
+  text-align: center;
+}
+
+.section-container {
+  position: relative;
+}
+
+.section-collapse-button {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  transform: translate(20%, -20%);
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.section-collapse-button img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.section-collapse-button.expanded img {
+  transform: rotate(180deg);
+  content: url(./images/minus.png);
+}
+
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.367s ease-in-out;
+}
+
+.section-content.expanded {
+  max-height: 1000px;
+  transition: max-height 0.9s ease-in-out;
+}
+
+.tools-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tools-text {
+  text-align: center;
+}
+
+.tools-container {
+  position: relative;
+}
+
+.tools-collapse-button {
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  transform: translate(20%, -20%);
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.tools-collapse-button img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.tools-collapse-button.expanded img {
+  transform: rotate(180deg);
+  content: url(./images/minus.png);
+}
+
+.tools-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.367s ease-in-out;
+}
+
+.tools-content.expanded {
+  max-height: 1000px;
+  transition: max-height 0.9s ease-in-out;
+}
+
+
+
