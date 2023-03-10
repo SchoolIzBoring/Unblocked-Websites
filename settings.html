@@ -12,7 +12,7 @@
       gtag('js', new Date());
       gtag('config', 'G-KXRHPNW89S');
     </script>
-    <title>Unblocked Websites | Settings</title>
+    <title>Unblocked Websites | Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
@@ -20,12 +20,9 @@
     <link rel="icon" type="image/png" href="images/uw.png" sizes="16x16">
     <link rel="stylesheet" href="./css/settings.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">
-    <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/click.js"></script>
-    <script src="./js/custombuttons.js"></script>
-    <script src="./js/tabcloak.js"></script>
-    <script src="./js/popup.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   </head>
@@ -56,10 +53,21 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="settings.html">
-                <img src="./images/gearcog.png" alt="Settings Button" width="50" height="50" class="centered-image">
-              </a>
+                <li>
+                    <button onclick="goToSettingsPage()" class="settings-button"></button>
+                  <script>
+                  function goToSettingsPage() {
+    var currentPage = window.location.href;
+    var previousPage = localStorage.getItem('previousPage');
+    if (currentPage !== previousPage) {
+        localStorage.setItem('previousPage', currentPage);
+    } else {
+        previousPage = document.referrer;
+    }
+    window.location.href = previousPage;
+}
+
+                  </script>
             </li>            
         </div>
       </div>
@@ -69,18 +77,43 @@
     </div>
     <div id="settings-box">
         <div style="text-align: center;">
-            <div style="text-align: center;">
-                <div class="section-title">Tab Cloak</div>
-                <input id="favicon" type="input" class="button" value="Change Favicon" onclick="changeFavicon()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">
-<input id="title" class="input" placeholder="Title" onkeydown="if (event.keyCode == 13) setTitle(this.value)" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">
-<input id="blanktab" type="button" class="button" value="About:Blank Tab" onclick="setBlankTab()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">
-<button onclick="resetCSS()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">Reset</button>
-                <div class="section-title">Theme</div>
-<div class="theme-buttons">
-  <button onclick="setTheme('dark')">Dark</button>
-  <button onclick="setTheme('light')">Light</button>
-  <button onclick="setTheme('colorful')">Colorful</button>
-</div>
+          <div style="text-align: center;">
+            <div class="section-title">Tab Cloak</div>
+            <link id="favicon" href="default-favicon.ico" rel="icon">
+            <input id="favicon-input" type="input" placeholder="Change Favicon" onkeydown="if (event.keyCode == 13) changeFavicon()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">
+            <button id="preset-favicon-btn" class="button" onclick="togglePresetDropdown()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">Preset Favicons ▼</button>
+            <input id="title-input" class="input" placeholder="Title" onkeydown="if (event.keyCode == 13) setTitle(this.value)" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">
+            <input type="button" class="button" value="About:Blank Tab" onclick="setBlankTab()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">
+            <button onclick="resetCSS()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">Reset</button>
+            <div class="section-title">Theme</div>
+            <div class="theme-buttons">
+              <button onclick="setTheme('dark')">Dark</button>
+              <button onclick="setTheme('light')">Light</button>
+              <button onclick="setTheme('colorful')">Colorful</button>
+            </div>
+          </div>
+        </div>
+        <div id="preset-favicon-dropdown" class="dropdown-content">
+            <button class="preset-option" data-preset="google" onclick="applyUrl('https://www.google.com/favicon.ico', 'Google')">Google</button>
+            <button class="preset-option" data-preset="google-classroom" onclick="applyUrl('https://ssl.gstatic.com/classroom/favicon.png', 'Google Classroom')">Google Classroom</button>
+            <button class="preset-option" data-preset="google-docs" onclick="applyUrl('https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico', 'Google Docs')">Google Docs</button>
+            <button class="preset-option" data-preset="schoology" onclick="applyUrl('https://www.schoology.com/sites/all/themes/schoology_theme/favicon.ico', 'Schoology')">Schoology</button>
+            <button class="preset-option" data-preset="other" onclick="applyUrl('https://example.com/favicon.ico', 'Other')">Other</button>
+        </div>
+    </div>
+    <script>
+function applyUrl(url, title) {
+  // Change favicon
+  document.getElementById("favicon").setAttribute("href", url);
+
+  // Change title
+  document.title = title;
+
+  // Close preset dropdown
+  document.getElementById("preset-favicon-dropdown").classList.remove("show");
+}
+
+    </script>  
 
               </div>              
           </div>          
@@ -258,23 +291,99 @@
   transition: background-color 0.3s ease-in-out, color 0.5s linear;
 }
 
+.settings-button {
+          width: 3vw;
+          height: 3vw;
+          position: absolute;
+          top: 5px;
+          right: -425px;
+          border: none;
+          background-color: transparent;
+          background-image: url('./images/gearcog.png');
+          background-size: cover;
+          cursor: pointer;
+        }
+
+        .dropdown {
+    position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 2px solid #0DD7F2;
+    background-color: #1C1C1C;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+    padding: 10px;
+    margin-top: 43px;
+    left: 43.3%;
+    transform: translate(-50%, calc(100% + -20px)) translateY(-323px) translateZ(0);
+}
+
+
+
+.dropdown-content button {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ffffff;
+  width: 100%;
+}
+
+.dropdown-content button:hover {
+background-color: rgba(0,0,0,0.2);
+border: none;
+border-radius: 10px;
+transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown:hover .dropbtn {
+background-color: #0DD7F2;
+}
+
+.dropdown-menu {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: auto;
+padding: 10px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+}
 
 
 
 
       </style>
       <script>
-function changeFavicon() {
-  var url = document.getElementById("favicon").value.trim();
-  if (url != "") {
+function addFaviconLink() {
+  var url = localStorage.getItem("favicon");
+  if (url != null) {
     var link = document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';
     link.href = url;
     document.getElementsByTagName('head')[0].appendChild(link);
-    localStorage.setItem("favicon", url);
   }
 }
+
+// Call the function to add the favicon link element to the current page
+addFaviconLink();
 
 function setTitle(title) {
   if (event.keyCode == 13) {
@@ -289,58 +398,103 @@ function setBlankTab() {
 }
 
 // Function to reset CSS
-function changeFavicon() {
-  const faviconUrl = prompt("Enter URL of new favicon:");
-  if (faviconUrl) {
-    document.querySelector("link[rel='shortcut icon']").href = faviconUrl;
-    localStorage.setItem("faviconUrl", faviconUrl);
-  }
-}
-
-function setTitle(title) {
-  if (event.key === "Enter") {
-    document.title = title;
-    localStorage.setItem("pageTitle", title);
-  }
-}
-
 function resetCSS() {
-  localStorage.removeItem("faviconUrl");
-  localStorage.removeItem("pageTitle");
-  location.reload();
+  document.documentElement.style.removeProperty("--theme");
+  document.documentElement.style.removeProperty("--text-primary");
+  document.documentElement.style.removeProperty("--text-secondary");
+  localStorage.removeItem("theme");
+  localStorage.removeItem("textPrimary");
+  localStorage.removeItem("textSecondary");
+  localStorage.removeItem("favicon");
+  document.location.reload();
 }
 
-// Set initial values from localStorage
-const faviconUrl = localStorage.getItem("faviconUrl");
-if (faviconUrl) {
-  document.querySelector("link[rel='shortcut icon']").href = faviconUrl;
+// Load saved favicon from local storage
+var savedFavicon = localStorage.getItem("favicon");
+if (savedFavicon) {
+  document.querySelector("link[rel*='icon']").href = savedFavicon;
 }
 
-const pageTitle = localStorage.getItem("pageTitle");
-if (pageTitle) {
-  document.title = pageTitle;
-}
+// Add event listener to title input
+var titleInput = document.getElementById("title");
+titleInput.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    setTitle(event.target.value);
+  }
+});
 
+// Function for About Blank:Tab
 function setBlankTab() {
-  var url = new URL(window.location.href);
-  var win = window.open();
-  win.document.body.style.margin = "0";
-  win.document.body.style.height = "100vh";
-  win.document.body.style.backgroundColor = window.getComputedStyle(document.body).getPropertyValue("background-color"); // Set background color to be the same as parent window
-  var iframe = win.document.createElement("iframe");
-  iframe.style.border = "none";
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.margin = "0";
-  iframe.referrerpolicy = "no-referrer";
-  iframe.allow = "fullscreen";
-  iframe.src = url.toString();
-  win.document.body.appendChild(iframe);
-  var script = win.document.createElement("script");
-  script.src = "https://lioxryt.github.io/js/main.js";
-  win.document.body.appendChild(script);
+    var url = new URL(window.location.href);
+    var win = window.open();
+    win.document.body.style.margin = "0";
+    win.document.body.style.height = "100vh";
+    var iframe = win.document.createElement("iframe");
+    iframe.style.border = "none";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.margin = "0";
+    iframe.referrerpolicy = "no-referrer";
+    iframe.allow = "fullscreen";
+    iframe.src = url.toString();
+    win.document.body.appendChild(iframe);
+    var script = win.document.createElement("script");
+    script.src = "https://lioxryt.github.io/js/main.js";
+    win.document.body.appendChild(script);
+  }
+
+  function togglePresetDropdown() {
+  var dropdown = document.getElementById("preset-favicon-dropdown");
+  dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
 }
 
+function applyPresetFavicon() {
+  var presetButtons = document.querySelectorAll(".preset-option");
+
+  function applyUrl(url, title) {
+    var faviconInput = document.getElementById("favicon");
+    var titleInput = document.getElementById("title");
+    faviconInput.value = url;
+    titleInput.value = title;
+
+    changeFavicon();
+    setTitle(title);
+
+    var console_output = document.getElementById("console-output");
+    console_output.style.color = "green";
+    console_output.innerText = "Preset applied successfully!";
+  }
+
+  for (var i = 0; i < presetButtons.length; i++) {
+    presetButtons[i].addEventListener("click", function () {
+      var url = this.getAttribute("data-url");
+      var title = this.getAttribute("data-title");
+      applyUrl(url, title);
+    });
+  }
+}
+   faviconInput.value = url;
+  titleInput.value = title;
+
+  changeFavicon();
+  setTitle(title);
+
+  var console_output = document.getElementById("console-output");
+  console_output.style.color = "green";
+  console_output.innerText = "Preset applied successfully!";
+
+  function setTheme(theme) {
+  if (theme === 'colorful') {
+    setInterval(function() {
+      document.body.style.transition='background-color 1s linear';
+      document.body.style.backgroundColor='hsl('+Math.floor(Math.random()*361)+',100%,50%)';
+    }, 1000);
+  }
+}
+
+
+
+      </script>
 
 
       </script>
