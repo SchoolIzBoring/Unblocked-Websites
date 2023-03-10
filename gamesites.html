@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" type="image/png" href="images/uw.png" sizes="16x16">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">
-    <script src="./js/index.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/scroll.js"></script>
     <script src="./js/click.js"></script>
     <script src="./js/custombuttons.js"></script>
@@ -161,44 +161,22 @@
         </div>
       </div>
     </div>
+    <script>
+      function addFaviconLink() {
+var url = localStorage.getItem("favicon");
+if (url != null) {
+  var link = document.createElement('link');
+  link.type = 'image/x-icon';
+  link.rel = 'shortcut icon';
+  link.href = url;
+  document.getElementsByTagName('head')[0].appendChild(link);
+}
+}
+
+// Call the function to add the favicon link element to the current page
+addFaviconLink();
+    </script>
     <style>
-      .collapse-button {
-        position: absolute;
-        top: 0%;
-        right: 10%;
-        transform: translate(20%, -20%);
-        cursor: pointer;
-        padding: 10px;
-        background-color: transparent;
-        border: none;
-      }
-
-      .collapse-button img {
-        width: 20px;
-        height: 20px;
-        transition: transform 0.5s ease-in-out;
-      }
-
-      .collapse-button.expanded img {
-        transform: rotate(180deg);
-        content: url(./images/minus.png);
-      }
-
-      .websites-collapse-button.expanded img {
-        transform: rotate(180deg);
-        content: url(./images/minus.png);
-      }
-
-      .section-collapse-button.expanded img {
-        transform: rotate(180deg);
-        content: url(./images/minus.png);
-      }
-
-      .tools-collapse-button.expanded img {
-        transform: rotate(180deg);
-        content: url(./images/minus.png);
-      }
-
       body {
         font-family: Roboto, sans-serif;
       font-size: 13.3333px;
@@ -310,5 +288,76 @@
         border-radius: 8px;
         transition: .3s;
       }
+
+      .btn {
+  color: #fff;
+  background: rgb(121, 121, 121);
+  background: #292929;
+  padding: 10px 16px;
+  line-height: 1.3333333;
+  border-radius: 10px;
+  border-color: #0DD7F2;
+  transition: background-color 0.3s ease, transform 0.5s ease;
+  box-shadow: 0 2px 5px rgba(115, 112, 112, 0.3);
+  margin-right: 10px;
+  position: relative;
+}
+
+.btn:hover {
+  background-color: #555;
+  color: #fff;
+  box-shadow: 3px 3px 3px #0DD7F2;
+  transform: translateY(-5px);
+  transition: transform 0.5s ease, background-color 0.5s ease; /* Slow down the transform transition */
+  border-color: #0DD7F2;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 8px;
+}
+
+
+#header {
+  margin-bottom: 0;
+  position: relative;
+}
+
+#header img {
+  margin-top: 20px;
+}
+
+.alert {
+  margin: 0 auto;
+  width: 55%;
+  color: #fff;
+  background-color:  #292929;
+  border-color: #676767;
+  padding: 8px 0 14px 0;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  #quickMenu {
+    width: 56%;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
     </style>
 </html>
