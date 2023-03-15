@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXRHPNW89S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-KXRHPNW89S');
+    </script>
+    <title>Unblocked Websites | Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/png" href="images/uw.png" sizes="16x16">
+    <link rel="stylesheet" href="./css/settings.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">
+    <script src="./js/common.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/click.js"></script>
+    <script src="./js/reset.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="https://github.com/SchoolIzBoring">
+            <img src="./images/uw.png" alt="Unblocked" width="50" height="50" class="logo">
+          </a>
+        </div>
+        <div class="navitems">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="gamesites.html">Gamesites</a>
+            </li>
+            <li>
+              <a href="proxies.html">Proxies</a>
+            </li>
+            <li>
+              <a href="other.html">Other</a>
+            </li>
+            <li>
+              <a href="tools.html">Tools</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <button onclick="goToSettingsPage()" class="settings-button"></button>
+                  <script>
+                  function goToSettingsPage() {
+    var currentPage = window.location.href;
+    var previousPage = localStorage.getItem('previousPage');
+    if (currentPage !== previousPage) {
+        localStorage.setItem('previousPage', currentPage);
+    } else {
+        previousPage = document.referrer;
+    }
+    window.location.href = previousPage;
+}
+
+                  </script>
+            </li>            
+        </div>
+      </div>
+    </nav>
+    <div id="header">
+      <img src="settingslogo.png" alt="Unblocked" />
+    </div>
+    <div id="settings-box">
+        <div style="text-align: center;">
+          <div style="text-align: center;">
+            <div class="section-title">Tab Cloak</div>
+            <link id="favicon" href="default-favicon.ico" rel="icon">
+            <input id="favicon-input" type="input" placeholder="Change Favicon" onkeydown="if (event.keyCode == 13) changeFavicon()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">
+            <button id="preset-favicon-btn" class="button" onclick="togglePresetDropdown()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">Preset Favicons ▼</button>
+            <input id="title-input" class="input" placeholder="Title" onkeydown="if (event.keyCode == 13) setTitle(this.value)" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">
+            <input type="button" class="button" value="About:Blank Tab" onclick="setBlankTab()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">
+            <button onclick="resetTabSettings()" style="border: none; background: #0DD7F2; width: fit-content; padding: 10px; border-radius: 15px; outline: none; color: black;">Reset</button>
+            <div class="section-title">Theme</div>
+            <div class="theme-buttons">
+              <button onclick="setTheme('dark')">Dark</button>
+              <button onclick="setTheme('light')">Light</button>
+              <button onclick="setTheme('colorful')">Colorful</button>
+              <button onclick="resetThemes()">Reset Themes</button>
+            </div>
+          </div>
+        </div>
+        <div id="preset-favicon-dropdown" class="dropdown-content">
+            <button class="preset-option" data-preset="google" onclick="applyUrl('https://storage.googleapis.com/operating-anagram-8280/favicon-32x32.png', 'Math practice - Google Search')">Google</button>
+            <button class="preset-option" data-preset="google-classroom" onclick="applyUrl('https://ssl.gstatic.com/classroom/favicon.png', 'Classes')">Google Classroom</button>
+            <button class="preset-option" data-preset="google-docs" onclick="applyUrl('https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico', 'Class notes - Google Docs')">Google Docs</button>
+            <button class="preset-option" data-preset="google-drive" onclick="applyUrl('https://ssl.gstatic.com/images/branding/product/2x/hh_drive_36dp.png', 'My Drive - Google Drive')">Google Drive</button>
+            <button class="preset-option" data-preset="schoology" onclick="applyUrl('https://clever.com/favicon.png', 'Clever | Portal')">Clever</button>
+            <button class="preset-option" data-preset="tylersis" onclick="applyUrl('https://tylersis.sisd.net/TSI_Live_360/favicon.ico', 'SIS K-12 360')">Tyler SIS</button>
+            <button class="preset-option" data-preset="newtab" onclick="applyUrl('https://example.com/favicon.ico', 'New Tab')">New Tab</button>
+            <button class="preset-option" data-preset="schoology" onclick="applyUrl('https://asset-cdn.schoology.com/sites/all/themes/schoology_theme/favicon.ico', 'Home | Schoology')">Schoology</button>
+            <button class="preset-option" data-preset="canvas" onclick="applyUrl('https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico' , 'Dashboard')">Canvas</button>
+            <button class="preset-option" data-preset="ngconnect" onclick="applyUrl('https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.myngconnect.com/login/chooseMainUI.spr&size=16', 'my NG connect')">My NG Connect</button>
+        </div>
+    </div>
+
+              </div>              
+          </div>          
+      </div>          
+      <style>
+        .collapse-button {
+          position: absolute;
+          top: 0%;
+          right: 10%;
+          transform: translate(20%, -20%);
+          cursor: pointer;
+          padding: 10px;
+          background-color: transparent;
+          border: none;
+        }
+
+        .collapse-button img {
+          width: 20px;
+          height: 20px;
+          transition: transform 0.5s ease-in-out;
+        }
+
+        .collapse-button.expanded img {
+          transform: rotate(180deg);
+          content: url(./images/minus.png);
+        }
+
+        .websites-collapse-button.expanded img {
+          transform: rotate(180deg);
+          content: url(./images/minus.png);
+        }
+
+        .section-collapse-button.expanded img {
+          transform: rotate(180deg);
+          content: url(./images/minus.png);
+        }
+
+        .tools-collapse-button.expanded img {
+          transform: rotate(180deg);
+          content: url(./images/minus.png);
+        }
+
+        body {
+            font-family: Roboto, sans-serif;
+          font-size: 13.3333px;
+          color: #ffffff;
+          text-align: center;
+          background-color: #1C1C1C;
+          cursor: url('images/pointerblue1.png'), none;
+          padding-top: 9.5%;
+        }
+
+        a:hover,
+        button:hover {
+          cursor: url('images/handblue120.png'), pointer;
+        }
+
+        .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 9.5%;
+          backdrop-filter: blur(18px);
+          box-shadow: 0 0 40px #0DD7F2;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 1%;
+          z-index: 5;
+          margin: auto;
+        }
+
+        .logo {
+          height: 45px;
+          border-radius: 15px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 5px;
+          user-select: none;
+        }
+
+        .centered-image {
+          width: 3vw;
+          height: 3vw;
+          position: absolute;
+          top: 5px;
+          right: -358px;
+        }
+
+        .navitems a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s ease-in-out;
+        }
+
+        .navitems a:hover {
+          color: #0DD7F2;
+        }
+
+        .navbar-nav li a {
+          background-color: none !important;
+          color: white !important;
+          padding: 15px;
+        }
+
+        .navbar-nav li a:hover {
+          background-color: none !important;
+          color: #0DD7F2 !important;
+          font-weight: 500;
+          transition: color 0.3s ease-in-out;
+        }
+
+        a {
+          color: white;
+          text-decoration: none;
+          background-color: none;
+        }
+
+        .active a {
+          color: #0DD7F2;
+          text-decoration: none;
+          border: 2px solid #0DD7F2;
+          padding: 10px 20px;
+          border-radius: 20px;
+        }
+
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.active>a:focus,
+        .navbar-inverse .navbar-nav>.active>a:hover {
+          color: #0DD7F2;
+          border-color: #0DD7F2;
+          background-color: #1C1C1C;
+        }
+
+        #settings-box {
+  border-radius: 10px;
+  border: 2px solid #0DD7F2;
+  background-color: #1C1C1C;
+  height: 300px;
+  padding: 20px;
+  width: 70%; /* change the value as needed */
+  margin: 0 auto;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.theme-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.theme-buttons button {
+  border: none;
+  background: #0DD7F2;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  outline: none;
+  color: black;
+  margin-right: 10px;
+}
+
+.theme-buttons button:hover {
+  background-color: #0f9caf;
+  color: #000000;
+  transition: background-color 0.3s ease-in-out, color 0.5s linear;
+}
+
+.settings-button {
+          width: 3vw;
+          height: 3vw;
+          position: absolute;
+          top: 5px;
+          right: -425px;
+          border: none;
+          background-color: transparent;
+          background-image: url('./images/gearcog.png');
+          background-size: cover;
+          cursor: pointer;
+        }
+
+        .dropdown {
+    position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border: 2px solid #0DD7F2;
+    background-color: #1C1C1C;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1;
+    padding: 10px;
+    margin-top: -157px;
+    left: 43.3%;
+    transform: translate(-50%, calc(100% + -20px)) translateY(-323px) translateZ(0);
+}
+
+
+
+.dropdown-content button {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #ffffff;
+  width: 100%;
+}
+
+.dropdown-content button:hover {
+background-color: rgba(0,0,0,0.2);
+border: none;
+border-radius: 10px;
+transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown:hover .dropbtn {
+background-color: #0DD7F2;
+}
+
+.dropdown-menu {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: auto;
+padding: 10px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+}
+
+
+/* For Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+        width: 16px;
+      }
+
+      ::-webkit-scrollbar-corner {
+        background: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #0DD7F2;
+        border: 4px solid transparent;
+        background-clip: content-box;
+        border-radius: 8px;
+        transition: .3s;
+      }
+
+
+      .settings-box.light {
+  background-color: white;
+}
+
+.settings-box.light h3 {
+  color: #1C1C1C;
+}
+
+.settings-box.light ul li button {
+  background-color: #0DD7F2;
+  color: white;
+}
+
+.settings-box.light ul li button.active {
+  background-color: #1C1C1C;
+  color: white;
+}
+
+      </style>
+      <script>
+function setTitle(title) {
+  if (event.keyCode == 13) {
+    document.title = title;
+    localStorage.setItem("title", title);
+  }
+}
+
+
+// Call the function to add the favicon link element to the current page
+addFaviconLink();
+
+function setTitle(title) {
+  if (event.keyCode == 13) {
+    document.title = title;
+    localStorage.setItem("title", title);
+  }
+}
+
+// Function to open about:blank tab
+function setBlankTab() {
+  window.open("about:blank", "_blank");
+}
+
+// Function to reset CSS
+function resetCSS() {
+  document.documentElement.style.removeProperty("--theme");
+  document.documentElement.style.removeProperty("--text-primary");
+  document.documentElement.style.removeProperty("--text-secondary");
+  localStorage.removeItem("theme");
+  localStorage.removeItem("textPrimary");
+  localStorage.removeItem("textSecondary");
+  localStorage.removeItem("favicon");
+  document.location.reload();
+}
+
+// Load saved favicon from local storage
+var savedFavicon = localStorage.getItem("favicon");
+if (savedFavicon) {
+  document.querySelector("link[rel*='icon']").href = savedFavicon;
+}
+
+// Add event listener to title input
+var titleInput = document.getElementById("title");
+titleInput.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    setTitle(event.target.value);
+  }
+});
+
+// Function for About Blank:Tab
+function setBlankTab() {
+    var url = new URL(window.location.href);
+    var win = window.open();
+    win.document.body.style.margin = "0";
+    win.document.body.style.height = "100vh";
+    var iframe = win.document.createElement("iframe");
+    iframe.style.border = "none";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.margin = "0";
+    iframe.referrerpolicy = "no-referrer";
+    iframe.allow = "fullscreen";
+    iframe.src = url.toString();
+    win.document.body.appendChild(iframe);
+    var script = win.document.createElement("script");
+    script.src = "https://lioxryt.github.io/js/main.js";
+    win.document.body.appendChild(script);
+  }
+
+  function togglePresetDropdown() {
+  var dropdown = document.getElementById("preset-favicon-dropdown");
+  dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+}
+
+function applyPresetFavicon() {
+  var presetButtons = document.querySelectorAll(".preset-option");
+
+  function applyUrl(url, title) {
+    var faviconInput = document.getElementById("favicon");
+    var titleInput = document.getElementById("title");
+    faviconInput.value = url;
+    titleInput.value = title;
+
+    changeFavicon();
+    setTitle(title);
+
+    var console_output = document.getElementById("console-output");
+    console_output.style.color = "green";
+    console_output.innerText = "Preset applied successfully!";
+  }
+
+  for (var i = 0; i < presetButtons.length; i++) {
+    presetButtons[i].addEventListener("click", function () {
+      var url = this.getAttribute("data-url");
+      var title = this.getAttribute("data-title");
+      applyUrl(url, title);
+    });
+  }
+}
+   faviconInput.value = url;
+  titleInput.value = title;
+
+  changeFavicon();
+  setTitle(title);
+
+  var console_output = document.getElementById("console-output");
+  console_output.style.color = "green";
+  console_output.innerText = "Preset applied successfully!";
+
+  function setTheme(theme) {
+  if (theme === 'colorful') {
+    setInterval(function() {
+      document.body.style.transition='background-color 1s linear';
+      document.body.style.backgroundColor='hsl('+Math.floor(Math.random()*361)+',100%,50%)';
+    }, 1000);
+  }
+}
+
+function invertColors() {
+  // invert background color
+  const body = document.body;
+  body.style.backgroundColor = '#ffff';
+
+  // invert text color
+  const textElements = document.querySelectorAll('h1, h2, h3, p, button');
+  textElements.forEach(element => {
+    const currentColor = getComputedStyle(element).color;
+    const rgbValues = currentColor.substring(currentColor.indexOf('(') + 1, currentColor.lastIndexOf(')')).split(',');
+    const invertedRgbValues = rgbValues.map(value => 255 - parseInt(value.trim()));
+    const invertedColor = `rgb(${invertedRgbValues.join(', ')})`;
+    element.style.color = invertedColor;
+  });
+}
+
+function setTheme(theme) {
+  const body = document.body;
+  const logo = document.querySelector('.logo img');
+  const settingsBox = document.querySelector('.settings-box');
+
+  // check if the current theme is already set to 'light'
+  const isLightTheme = body.style.backgroundColor === '#ffff';
+
+  switch (theme) {
+    case 'dark':
+      body.style.backgroundColor = '#333';
+      logo.src = './images/logo-light.png';
+      settingsBox.classList.remove('light');
+      settingsBox.classList.add('dark');
+      break;
+    case 'light':
+      if (!isLightTheme) { // only invert colors if not already in light theme
+        invertColors();
+        settingsBox.classList.remove('dark');
+        settingsBox.classList.add('light');
+      }
+      logo.src = './images/logo-dark.png';
+      break;
+    default:
+      body.style.backgroundColor = 'white';
+      logo.src = './images/logo-dark.png';
+      settingsBox.classList.remove('dark', 'light');
+      break;
+  }
+}
+
+
+
+
+
+function resetThemes() {
+  // Reset all theme settings
+  localStorage.removeItem('theme');
+  document.body.removeAttribute('data-theme');
+
+  // Refresh the page
+  window.location.reload();
+}
+
+function resetTabSettings() {
+  // remove selected class from all preset-option buttons
+  const presetButtons = document.querySelectorAll('.preset-option');
+  presetButtons.forEach(button => button.classList.remove('selected'));
+
+  // reset favicon to default
+  const favicon = document.querySelector('link[rel="shortcut icon"]');
+  favicon.href = './images/favicon.ico';
+  
+  // reload page to reset any other settings
+  location.reload();
+}
+
+
+function changeFavicon() {
+  const faviconUrl = document.getElementById('favicon-input').value;
+  const validImageExtensions = ['.ico', '.png', '.jpeg', '.jpg', '.gif'];
+  const fileExtension = faviconUrl.substr(faviconUrl.lastIndexOf('.')).toLowerCase();
+
+  if (validImageExtensions.includes(fileExtension)) {
+    applyUrl(faviconUrl, 'Custom Favicon');
+    localStorage.setItem('faviconUrl', faviconUrl);
+  } else {
+    alert('Invalid image format! Please enter a valid URL with an image extension of .ico, .png, .jpeg, .jpg or .gif.');
+  }
+}
+
+window.addEventListener('load', () => {
+  const savedFaviconUrl = localStorage.getItem('faviconUrl');
+  if (savedFaviconUrl) {
+    const validImageExtensions = ['.ico', '.png', '.jpeg', '.jpg', '.gif'];
+    const fileExtension = savedFaviconUrl.substr(savedFaviconUrl.lastIndexOf('.')).toLowerCase();
+
+    if (validImageExtensions.includes(fileExtension)) {
+      document.getElementById('favicon-input').value = savedFaviconUrl;
+      applyUrl(savedFaviconUrl, 'Custom Favicon');
+    } else {
+      localStorage.removeItem('faviconUrl');
+    }
+  }
+});
+
+
+
+
+
+      </script>
+
+
+      </script>
+</html>
