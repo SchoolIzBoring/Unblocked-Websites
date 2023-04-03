@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Unblocked Websites | Home</title>
+    <link rel="icon" type="image/png" href="images/uw.png" sizes="16x16" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/popup.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" />
+    <style>
+      body {
+        font-family: Roboto;
+        color: #ffffff;
+        text-align: center;
+        background-color: #1c1c1c;
+        cursor: url('images/pointerblue1.png'), none;
+        padding-top: 9.5%;
+      }
+      a:hover,
+      button:hover {
+        cursor: url('images/handblue120.png'), pointer;
+      }
+    </style>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXRHPNW89S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-KXRHPNW89S');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="https://github.com/SchoolIzBoring">
+            <img src="./images/uw.png" alt="Unblocked" width="50" height="50" class="logo" />
+          </a>
+        </div>
+        <div class="navitems">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="gamesites.html">Gamesites</a>
+            </li>
+            <li>
+              <a href="proxies.html">Proxies</a>
+            </li>
+            <li>
+              <a href="other.html">Other</a>
+            </li>
+            <li>
+              <a href="tools.html">Tools</a>
+            </li>
+            <li>
+              <a href="settings.html">Settings</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="header">
+      <img src="logo.png" alt="Unblocked" />
+    </div>
+    <p>Number of viewers: <span id="viewerCount">432</span></p>
+    <div class="container">
+      <div></div>
+      <p class="section-text">Welcome to v2!</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/keen-slider"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/popup.js"></script>
+    <div class="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <p class="popup-text">I have decided to stop producing and updating my website to work on a new gamesite. If you still want to keep it up and running, please fill out this form:</p>
+        <div class="btn-container">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScVP2EsZZm9opZvk_Ak2mT87Icq89jH7fxc0g7eOAdi3Jcl4g/viewform?usp=sf_link" class="btn">Fill out form</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const popup = document.querySelector('.popup');
+      const closeBtn = document.querySelector('.close-btn');
+      const flagKey = 'popup-displayed';
+  
+      // Check if the flag is set
+      if (!localStorage.getItem(flagKey)) {
+        displayPopup();
+      }
+  
+      // Display the popup
+      function displayPopup() {
+        popup.style.display = 'block';
+      }
+  
+      // Close the popup
+      function closePopup() {
+        popup.style.display = 'none';
+        localStorage.setItem(flagKey, true);
+      }
+  
+      // Close the popup when the close button is clicked
+      closeBtn.addEventListener('click', closePopup);
+    </script>
+  </body>
+  </html>
