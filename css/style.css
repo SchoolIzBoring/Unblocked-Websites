@@ -395,3 +395,21 @@ background-color: #0AB9D2;
         height: 100%;
       }
 
+.popup-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #000;
+  z-index: 9999;
+  overflow: auto;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: #000;
+}
+
+
