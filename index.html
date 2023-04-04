@@ -109,7 +109,7 @@ const closeBtn = document.querySelector('.close-btn');
 const flagKey = 'popup-displayed';
 
 // Check if the flag is set
-if (!localStorage.getItem(flagKey) && !closeBtn.clicked) {
+if (!localStorage.getItem(flagKey)) {
   displayPopup();
 }
 
@@ -121,12 +121,12 @@ function displayPopup() {
 // Close the popup
 function closePopup() {
   popup.style.display = 'none';
-  localStorage.setItem(flagKey, true);
-  closeBtn.clicked = true;
+  localStorage.removeItem(flagKey);
 }
 
 // Close the popup when the close button is clicked
 closeBtn.addEventListener('click', closePopup);
+
     </script>
   </body>
 </html>
