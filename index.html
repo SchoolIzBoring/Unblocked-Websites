@@ -18,6 +18,7 @@
         cursor: url('images/pointerblue1.png'), none;
         padding-top: 9.5%;
       }
+
       a:hover,
       button:hover {
         cursor: url('images/handblue120.png'), pointer;
@@ -27,6 +28,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -37,6 +39,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXRHPNW89S"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
         dataLayer.push(arguments);
       }
@@ -79,7 +82,8 @@
     <div id="header">
       <img src="logo.png" alt="Unblocked" />
     </div>
-    <p>Number of viewers: <span id="viewerCount">432</span></p>
+    <p>Number of viewers: <span id="viewerCount">432</span>
+    </p>
     <div class="container">
       <div></div>
       <p class="section-text">Welcome to v2!</p>
@@ -100,28 +104,24 @@
       </div>
     </div>
     <script>
-     const popup = document.querySelector('.popup');
-const closeBtn = document.querySelector('.close-btn');
-const flagKey = 'popup-displayed';
-
-// Check if the flag is set
-if (localStorage.getItem(flagKey) !== 'true') {
-  displayPopup();
-}
-
-// Display the popup
-function displayPopup() {
-  popup.classList.remove('hidden');
-}
-
-// Close the popup
-function closePopup() {
-  popup.classList.add('hidden');
-  localStorage.setItem(flagKey, true);
-}
-
-// Close the popup when the close button is clicked
-closeBtn.addEventListener('click', closePopup);
+      const popup = document.querySelector('.popup');
+      const closeBtn = document.querySelector('.close-btn');
+      const flagKey = 'popup-displayed';
+      // Check if the flag is set
+      if (localStorage.getItem(flagKey) !== 'true') {
+        displayPopup();
+      }
+      // Display the popup
+      function displayPopup() {
+        popup.classList.remove('hidden');
+      }
+      // Close the popup
+      function closePopup() {
+        popup.classList.add('hidden');
+        localStorage.setItem(flagKey, null);
+      }
+      // Close the popup when the close button is clicked
+      closeBtn.addEventListener('click', closePopup);
     </script>
   </body>
-  </html>
+</html>
