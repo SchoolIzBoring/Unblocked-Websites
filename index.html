@@ -108,17 +108,17 @@
       const closeBtn = document.querySelector('.close-btn');
       const flagKey = 'popup-displayed';
       // Check if the flag is set
-      if (localStorage.getItem(flagKey) !== 'true') {
+      if (!localStorage.getItem(flagKey)) {
         displayPopup();
       }
       // Display the popup
       function displayPopup() {
-        popup.classList.remove('hidden');
+        popup.style.display = 'block';
       }
       // Close the popup
       function closePopup() {
-        popup.classList.add('hidden');
-        localStorage.setItem(flagKey, null);
+        popup.style.display = 'none';
+        localStorage.setItem(flagKey, null); // set to falsy value to prevent future displays
       }
       // Close the popup when the close button is clicked
       closeBtn.addEventListener('click', closePopup);
